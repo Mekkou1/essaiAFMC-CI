@@ -19,19 +19,20 @@
     "@nuxt/content": "^1.0.0",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/markdownit": "^2.0.0",
+    "animate.css": "^4.1.1",
     "animejs": "^3.2.2",
     "core-js": "^3.25.3",
     "markdown-it": "^14.1.0",
     "marked": "^14.0.0",
-    "nuxt": "^3.12.4",
+    "nuxt": "^2.15.8",
     "prism-themes": "^1.9.0",
     "vue": "^2.7.10",
     "vue-client-only": "^2.1.0",
     "vue-meta": "^2.4.0",
     "vue-no-ssr": "^1.1.1",
-    "vue-router": "^4.4.3",
+    "vue-router": "^3.5.3",
     "vue-server-renderer": "^2.2.6",
-    "vue-template-compiler": "^0.1.0"
+    "vue-template-compiler": "^2.7.10"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",

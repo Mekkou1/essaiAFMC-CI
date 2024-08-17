@@ -11,24 +11,24 @@
         <div class="row">
           <div class="col-md-6 order-md-2">
             <div class="text-center">
-              <img src="/images/presidente.png" alt="À propos" class="img-fluid rounded mb-3 animate__animated animate__fadeInRight" style="width: 250px;">
-              <h5 class="font-size: 20px; background-color: transparent; animate__animated animate__fadeInRight">
+              <img v-scroll-animation src="/images/presidente.png" alt="À propos" class="img-fluid rounded mb-3" style="width: 250px;">
+              <h5 v-scroll-animation class="font-size: 20px; background-color: transparent;">
                 Dr(MC) NOBAH KACOU-WODJE
               </h5>
-              <h6 class="animate__animated animate__fadeInRight">
+              <h6 v-scroll-animation>
                 Présidente
               </h6>
             </div>
           </div>
           <div class="col-md-6 order-md-1">
             <div class="text-center">
-              <h2 class="font-weight-bold animate__animated animate__fadeInLeft">
+              <h2 v-scroll-animation class="font-weight-bold">
                 Qui sommes nous ?
               </h2>
-              <p class="lead animate__animated animate__fadeInLeft">
+              <p v-scroll-animation class="lead">
                 Nous sommes l'Association des Femmes Chercheures de Côte d'Ivoire (AFEMC-CI), une organisation dédiée à la promotion des droits et de l'épanouissement professionnel des femmes dans l'enseignement supérieur et la recherche. Fondée le 14 janvier 1995, l'AFEMC-CI regroupe des enseignantes-chercheures et des chercheures de toutes les universités et centres de recherche en Côte d'Ivoire.
               </p>
-              <NuxtLink to="/about" class="btn btn-primary btn-lg mt-3 animate__animated animate__fadeInUp">
+              <NuxtLink v-scroll-animation to="/about" class="btn btn-primary btn-lg mt-3">
                 En savoir plus
               </NuxtLink>
             </div>
