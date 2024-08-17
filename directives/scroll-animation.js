@@ -1,6 +1,4 @@
 // directives/scroll-animation.js
-
-// directives/scroll-animation.js
 export default {
   inserted: (el) => {
     const observer = new IntersectionObserver((entries) => {
