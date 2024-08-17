@@ -10,7 +10,7 @@
     >
       <div style="background-color: rgba(245, 245, 220, 0.5); padding: 40px; border-radius: 10px; margin: 0 8px;" class="hover-effect animate__animated">
         <h1 class="display-4 font-weight-bold animated hover-effect" style="color: mediumblue; border: 1px solid blue; border-radius: 5px; text-shadow: 2px 2px 5px #000; animation: lightEffect 2s ease-in-out infinite; border-width: 5px; padding: 10px;">
-          Association des Femmes-Chercheuses et Enseignants-chercheures de Côte d'Ivoire
+          Association des Femmes-Chercheures et Enseignants-chercheures de Côte d'Ivoire
         </h1>
       </div>
       <p class="lead animated hover-effect" style="font-size: 18px; font-weight: bold; animation: animate__zoomIn;">
