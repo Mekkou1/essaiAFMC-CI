@@ -2,18 +2,27 @@
   <section
     id="hero"
     class="hero-section text-white text-center py-5"
-    style="background: url('/images/hero-bg.png') no-repeat center center; background-size: cover; height: 378px; "
+    style="background: url('/images/hero-bg.png') no-repeat center center; background-size: cover; height: 378px;"
   >
     <div
-      class="container d-flex flex-column justify-content-center align-items-center h-100"
-      style="background-color: rgba(255, 100, 100, 0.4); animation: waveAnimation 5s ease-in-out infinite;"
+      class="container d-flex flex-column justify-content-center align-items-center h-100 animate__animated animate__fadeInUp"
+      style="background-color: rgba(255, 100, 100, 0.4);"
     >
-      <div style="background-color: rgba(245, 245, 220, 0.5); padding: 40px; border-radius: 10px; margin: 0 8px;" class="hover-effect animate__animated">
-        <h1 class="display-4 font-weight-bold animated hover-effect" style="color: mediumblue; border: 1px solid blue; border-radius: 5px; text-shadow: 2px 2px 5px #000; animation: lightEffect 2s ease-in-out infinite; border-width: 5px; padding: 10px;">
+      <div
+        style="background-color: rgba(245, 245, 220, 0.5); padding: 40px; border-radius: 10px; margin: 0 8px;"
+        class="hover-effect animate__animated animate__fadeInUp"
+      >
+        <h1
+          class="display-4 font-weight-bold animate__animated animate__fadeInUp"
+          style="color: mediumblue; border: 1px solid blue; border-radius: 5px; text-shadow: 2px 2px 5px #000; animation: lightEffect 2s ease-in-out infinite; border-width: 5px; padding: 10px;"
+        >
           Nos Actualités
         </h1>
       </div>
-      <p class="lead animated hover-effect" style="font-size: 18px; font-weight: bold; animation: animate__zoomIn;" />
+      <p
+        class="lead animate__animated animate__fadeInUp"
+        style="font-size: 18px; font-weight: bold;"
+      />
     </div>
   </section>
 </template>
@@ -40,4 +49,4 @@
       padding: 3rem 1.5rem;
     }
   }
-  </style>
+</style>
