@@ -1,24 +1,10 @@
 <template>
   <!-- Contact Section -->
-  <section id="contact-btn" class=" py-5 bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <h1 class="main-heading no-global-styles" style="color: black; background-color: transparent;">
-            Avez-vous des questions ?
-          </h1>
-          <h4 class="no-global-styles" style="color: black; background-color: transparent;">
-            Ecrivez nous s'il vous plait via notre formulaire
-          </h4>
-        </div>
-        <div class="col-md-4 text-center my-auto ">
-          <NuxtLink to="/contact" class="p-2 btn btn-primary">
-            Ecrivez-nous
-          </NuxtLink>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="col-md-12">
+    <h1 class="main-heading no-global-styles" style="color: black; background-color: transparent;">
+      N'ésitez pas à nous contacter pour toutes vos préocupations
+    </h1>
+  </div>
 </template>
 
 <script>
@@ -30,3 +16,32 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.main-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.row {
+  width: 100%;
+}
+
+.col-md-12 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-btn {
+  padding: 20px 0;
+}
+</style>

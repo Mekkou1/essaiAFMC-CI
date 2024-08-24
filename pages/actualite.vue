@@ -17,7 +17,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <img src="/images/bibliotheque.jpeg" alt="Illustration de la bibliothèque" class="img-fluid rounded shadow-sm mb-4">
+            <img src="/images/bibliotheque.jpg" alt="Illustration de la bibliothèque" class="img-fluid rounded shadow-sm mb-4">
           </div>
           <div class="col-md-6">
             <LibrairyVue />
@@ -25,8 +25,7 @@
         </div>
       </div>
     </div>
-
-    <ContactVue />
+    <SliderVue />
   </div>
 </template>
 
@@ -37,7 +36,7 @@ import ArticleDetail from '~/components/ArticleDetail.vue'
 import LibrairyVue from '~/components/LibrairyVue.vue'
 import VideoGallery from '~/components/VideoGallery.vue'
 import HeroActualite from '~/components/HeroActualite.vue'
-import ContactVue from '~/components/ContactVue.vue'
+import SliderVue from '~/components/SliderVue.vue'
 
 export default {
   name: 'Actualite',
@@ -50,7 +49,7 @@ export default {
     LibrairyVue,
     VideoGallery,
     HeroActualite,
-    ContactVue
+    SliderVue
   },
   computed: {
     ...mapGetters(['selectedArticleSlug'])

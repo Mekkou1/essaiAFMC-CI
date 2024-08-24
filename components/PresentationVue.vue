@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="py-5 contener" style="background-color: #f6f6f6;">
+    <div class="py-5 contener">
       <div class="row">
         <div class="col-md-12 text-center">
           <h2 class="main-heading">
@@ -24,8 +24,10 @@
                   sa contribution au développement de la nation par la promotion des femmes chercheures.
                 </p>
               </div>
-              <div class="col-md-4">
-                <img src="/images/presidente.png" alt="Présidente" class="img-fluid rounded-circle" style="font-size: 90px;">
+              <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <div class="image-container">
+                  <img src="/images/presidente.png" alt="Présidente" class="img-fluid rounded-circle">
+                </div>
               </div>
             </div>
           </div>
@@ -40,3 +42,12 @@ export default {
   name: 'PresentationVue'
 }
 </script>
+
+<style scoped>
+.image-container {
+  background-color: rgb(192, 189, 189);
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+</style>

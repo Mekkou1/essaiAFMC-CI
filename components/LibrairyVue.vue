@@ -65,5 +65,8 @@ export default {
   margin: 0 auto;
   padding: 20px;
 }
+.btn{
+  background-color: #FB0683;
+}
 
 </style>

@@ -4,7 +4,7 @@
     <section id="objectives" class="py-5 bg-light">
       <div class="container">
         <h2 class="font-weight-bold text-center">
-          Nos Objectifs
+          NOS OBJECTIFS
         </h2>
         <div class="row">
           <div v-for="(group, index) in objectivesGroups" :key="group.title" class="col-md-4">
@@ -77,60 +77,60 @@ export default {
 }
 </script>
 
-  <style scoped>
-  .pinned-card {
-    position: relative;
-    padding-top: 20px;
-    background: #fefefe;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-top: 20px;
-    transform: translateY(50px);
-    opacity: 0;
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-  }
+<style scoped>
+.pinned-card {
+  position: relative;
+  padding-top: 20px;
+  background: #fefefe;
+  border: 5px solid #FB0683; /* Bordure épaisse et couleur rose */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-top: 20px;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
 
-  .pinned-card.pinned {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.pinned-card.pinned {
+  transform: translateY(0);
+  opacity: 1;
+}
 
-  .pin-image {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
-    z-index: 10;
-  }
+.pin-image {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+}
 
-  .card-body {
-    padding-top: 40px; /* Space for the pin */
-  }
+.card-body {
+  padding-top: 40px; /* Space for the pin */
+}
 
-  .card-title {
-    margin-bottom: 10px;
-  }
+.card-title {
+  margin-bottom: 10px;
+}
 
-  .card-text ul {
-    list-style-type: none;
-    padding: 0;
-  }
+.card-text ul {
+  list-style-type: none;
+  padding: 0;
+}
 
-  .card-text ul li {
-    margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
-  }
+.card-text ul li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
 
-  .card-text ul li:before {
-    content: '\2022';
-    color: #007bff;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-  }
-  </style>
+.card-text ul li:before {
+  content: '\2022';
+  color: #007bff;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+</style>

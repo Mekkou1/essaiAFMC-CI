@@ -2,53 +2,62 @@
   <section
     id="hero"
     class="hero-section text-white text-center py-5"
-    style="background: url('/images/hero-bg.png') no-repeat center center; background-size: cover; height: 100vh;"
+    style="background: url('/images/hero_bg.jpg') no-repeat center center; background-size: cover; height: 85vh; width: 100%; position: relative;"
   >
     <div
-      class="container d-flex flex-column justify-content-center align-items-center h-100 animate__animated animate__fadeIn"
-      style="background-color: rgba(255, 100, 100, 0.4);"
+      class="hover-effect animate__animated animate__fadeInUp"
+      style="margin-top: 30px;  margin-right: 70px;   text-align: right;"
     >
-      <div
-        style="background-color: rgba(245, 245, 220, 0.5); padding: 40px; border-radius: 10px; margin: 0 8px;"
-        class="hover-effect animate__animated animate__fadeInUp"
+      <h1
+        class="display-4 font-weight-bold animate__animated animate__fadeInUp"
+        style="margin-top: 10px;  color: mediumblue; text-shadow: none;  font-family: 'Anton', sans-serif; font-weight: 800; font-size: 150px;   color: aliceblue; align-items: right;"
       >
-        <h1
-          class="display-4 font-weight-bold animate__animated animate__fadeInUp"
-          style="color: mediumblue; border: 1px solid blue; border-radius: 5px; text-shadow: 2px 2px 5px #000; border-width: 5px; padding: 10px;"
-        >
-          Association des Femmes-Chercheuses et Enseignants-chercheures de Côte d'Ivoire
-        </h1>
-      </div>
-      <p
-        class="lead animate__animated animate__fadeInUp"
-        style="font-size: 18px; font-weight: bold;"
-      >
-        Favoriser l'innovation et la collaboration dans le domaine de l'enseignement supérieur et de la recherche pour les femmes.
-      </p>
+        AFEMC-CI
+      </h1>
     </div>
+    <p
+      class="lead animate__animated animate__fadeInUp"
+      style=" margin-top: 250px;  font-size: 25px; font-weight: bold; font-style: italic; background-color:#FB0683 ;  "
+    >
+      <marquee behavior="" direction="rigth">
+        Favoriser l'innovation et la collaboration dans le domaine de l'enseignement supérieur et de la recherche pour les femmes.
+      </marquee>
+    </p>
   </section>
 </template>
 
-  <style scoped>
-  @keyframes waveAnimation {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    50% { transform: translateY(0); }
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+@keyframes waveAnimation {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  50% { transform: translateY(0); }
+}
+.animated {
+  animation: waveAnimation 5s ease-in-out infinite;
+}
+.hover-effect:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 1.5rem;
   }
-  @keyframes lightEffect {
-    0% { box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px violet, 0 0 70px violet, 0 0 80px violet, 0 0 100px violet, 0 0 150px violet; }
-    50% { box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px violet, 0 0 70px violet, 0 0 80px violet, 0 0 100px violet, 0 0 150px violet; }
-  }
-  .animated {
-    animation: waveAnimation 5s ease-in-out infinite;
-  }
-  .hover-effect:hover {
-    transform: scale(1.05);
-    transition: transform 0.5s ease-in-out;
-  }
-  @media (max-width: 768px) {
-    .hero-section {
-      padding: 3rem 1.5rem;
-    }
-  }
-  </style>
+  .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:  rgba(0, 0, 0, 0.2); /* Noir avec 50% de transparence */; /* Noir avec 50% de transparence */
+  z-index: 0; /* Assurez-vous que la superposition est derrière le contenu */
+}
+}
+.rounded-h1 {
+  border-radius: 50px; /* Ajustez la valeur selon vos besoins */
+  padding: 10px; /* Ajoutez un padding pour que les bordures soient visibles */
+  background-color: aliceblue; /* Couleur de fond pour rendre les bordures visibles */
+}
+</style>

@@ -6,19 +6,18 @@
         <!-- Executive Board -->
         <div class="row mt-4">
           <div class="col-md-12">
-            <h3 class="text-center">
-              Bureau Exécutif
-            </h3>
             <div class="executive-board">
               <div class="row">
                 <!-- Loop through executive members -->
                 <div v-for="(member, index) in executiveMembers" :key="index" class="col-md-3">
                   <div class="executive-member">
                     <img :src="member.photo" alt="Membre du Bureau" class="img-fluid rounded-circle">
-                    <h5 class="mt-2">
+                    <h5 class="mt-2" style="color: #000000">
                       {{ member.name }}
                     </h5>
-                    <p>{{ member.position }}</p>
+                    <p style="color: #FB0683">
+                      {{ member.position }}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -27,7 +26,7 @@
         </div>
 
         <!-- Accordions -->
-        <div id="accordionPanelsStayOpenExample" class="accordion">
+        <div id="accordionPanelsStayOpenExample" class="accordion custom-accordion">
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button
@@ -38,7 +37,7 @@
                 aria-expanded="true"
                 aria-controls="panelsStayOpen-collapseOne"
               >
-                <strong>STRUCTURE ET FONCTIONNEMENT DE L'AFEM-CI</strong>
+                <strong style="color:#FB0683">STRUCTURE ET FONCTIONNEMENT DE L'AFEM-CI</strong>
               </button>
             </h2>
             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
@@ -123,7 +122,7 @@
                 aria-expanded="false"
                 aria-controls="panelsStayOpen-collapseTwo"
               >
-                <strong>STATUTS ET REGLEMENTS INTERIEUR</strong>
+                <strong style="color:#FB0683">STATUTS ET REGLEMENTS INTERIEUR</strong>
               </button>
             </h2>
             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
@@ -142,17 +141,17 @@
                 aria-expanded="false"
                 aria-controls="panelsStayOpen-collapseThree"
               >
-                <strong>ORGANIGRAMME</strong>
+                <strong style="color:#FB0683">ORGANIGRAMME</strong>
               </button>
             </h2>
             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
               <div class="accordion-body">
-                <img src="images/organigramme.png" alt="Organizational Chart" style="max-width: 100%; height: auto;">
+                <img src="/images/organigramme.png" alt="Organizational Chart" style="max-width: 100%; height: auto;">
               </div>
             </div>
           </div>
         </div>
-        <div class="accordion-item">
+        <div class="accordion-item custom-accordion">
           <h2 class="accordion-header">
             <button
               class="accordion-button collapsed"
@@ -162,12 +161,12 @@
               aria-expanded="false"
               aria-controls="panelsStayOpen-Four"
             >
-              <strong>RESSOURCES DE L’ASSOCIATION</strong>
+              <strong style="color:#FB0683">RESSOURCES DE L’ASSOCIATION</strong>
             </button>
           </h2>
           <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              <ul>
+            <div class="accordion-body" style="background:#FB0683; text-align: center; color: white;">
+              <ul style="list-style-position: inside; display: inline-block; text-align: left;">
                 <li>Les ressources de l’AFEMC-CI proviennent des :</li><br>
                 <ul>
                   <li><strong>Droits d’adhésion :</strong></li>
@@ -251,4 +250,27 @@ export default {
 .card-body {
   padding: 20px;
 }
+.accordion-button{
+  color: #Fb0683;
+}
+.accordion-item h2{
+  border: none;
+  background-color: none;
+}
+
+/* Exclusion des styles globaux pour les titres dans l'accordéon */
+.custom-accordion h1,
+.custom-accordion h2,
+.custom-accordion h3,
+.custom-accordion h4,
+.custom-accordion h5,
+.custom-accordion h6 {
+    font-family: inherit; /* Réinitialiser à la police par défaut */
+    color: inherit; /* Réinitialiser à la couleur par défaut */
+    background-color: inherit; /* Réinitialiser l'arrière-plan */
+    border: none; /* Supprimer la bordure */
+    border-radius: 0; /* Supprimer les bordures arrondies */
+    padding: 0; /* Supprimer le padding */
+    display: block; /* Réinitialiser le display */
+ }
 </style>

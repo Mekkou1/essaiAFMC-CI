@@ -20,3 +20,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.btn{
+  background-color: #FB0683;
+  border: 1px solid;
+  border-radius: 25%;
+}
+</style>

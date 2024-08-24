@@ -2,7 +2,7 @@
   <section id="objectives" class="py-5 bg-light">
     <div class="container">
       <h2 class="font-weight-bold text-center">
-        Nos Objectifs
+        NOS OBJECTIFS
       </h2>
       <div class="row">
         <div

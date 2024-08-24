@@ -5,18 +5,23 @@
       <div class="container">
         <div class="row mt-4">
           <div class="col-md-12">
-            <div class="mission-details">
-              <p class="mission-description">
-                L’AFEMC-CI a pour missions de :
-              </p>
-              <ul class="mission-list">
-                <li>Promouvoir la femme chercheure dans son cadre institutionnel.</li>
-                <li>Appuyer les initiatives des femmes chercheures auprès des organisations gouvernementales et non-gouvernementales dans la recherche pour le développement.</li>
-                <li>Positionner l’Association comme une institution de référence en Côte d’Ivoire.</li>
-              </ul>
-              <p class="mission-description mt-4">
-                Pour assurer ces missions, l’AFEMC-CI devra capter un maximum de ressources humaines et financières.
-              </p>
+            <div class="mission-details d-flex align-items-start">
+              <div class="mission-text">
+                <p class="mission-description">
+                  L’AFEMC-CI a pour missions de :
+                </p>
+                <ul class="mission-list">
+                  <li>Promouvoir la femme chercheure dans son cadre institutionnel.</li>
+                  <li>Appuyer les initiatives des femmes chercheures auprès des organisations gouvernementales et non-gouvernementales dans la recherche pour le développement.</li>
+                  <li>Positionner l’Association comme une institution de référence en Côte d’Ivoire.</li>
+                </ul>
+                <p class="mission-description mt-4">
+                  Pour assurer ces missions, l’AFEMC-CI devra capter un maximum de ressources humaines et financières.
+                </p>
+              </div>
+              <div class="mission-image">
+                <img src="/images/mission.jpg" alt="Mission Image" class="img-fluid rounded-circle">
+              </div>
             </div>
           </div>
         </div>
@@ -35,40 +40,62 @@ export default {
 }
 </script>
 
-  <style scoped>
-  #missions {
-    background: #f8f9fa;
-    padding: 50px 0;
-  }
+<style scoped>
+#missions {
+  background: transparent;
+  padding: 50px 0;
+}
 
-  #missions h2 {
-    margin-bottom: 30px;
-  }
+#missions h2 {
+  margin-bottom: 30px;
+}
 
-  .mission-details {
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+.mission-details {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+}
 
-  .mission-description {
-    font-size: 1.1rem;
-    color: #343a40;
-  }
+.mission-text {
+  flex: 1;
+  margin-right: 20px;
+}
 
-  .mission-list {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 10px;
-  }
+.mission-description {
+  font-size: 1.1rem;
+  color: #343a40;
+}
 
-  .mission-list li {
-    margin-bottom: 10px;
-    color: #6c757d;
-  }
+.mission-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
 
-  .mt-4 {
-    margin-top: 1.5rem;
-  }
-  </style>
+.mission-list li {
+  margin-bottom: 10px;
+  color: #6c757d;
+}
+
+.mission-image {
+  flex-shrink: 0;
+  width: 200px; /* Ajustez la taille selon vos besoins */
+  height: 200px; /* Ajustez la taille selon vos besoins */
+  border: 5px solid #FB0683; /* Couleur et épaisseur de la bordure */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.mission-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+</style>

@@ -11,21 +11,18 @@
         <div class="row">
           <div class="col-md-6 order-md-2">
             <div class="text-center">
-              <img v-scroll-animation src="/images/presidente.png" alt="À propos" class="img-fluid rounded mb-3" style="width: 250px;">
-              <h5 v-scroll-animation class="font-size: 20px; background-color: transparent;">
-                Dr(MC) NOBAH KACOU-WODJE
-              </h5>
-              <h6 v-scroll-animation>
-                Présidente
-              </h6>
+              <div class="photo-stack">
+                <img v-scroll-animation src="images/contact1.jpg" alt="Photo 2" class="photo-middle">
+                <img v-scroll-animation src="images/contact2.jpg" alt="Photo 3" class="photo-bottom">
+              </div>
             </div>
           </div>
           <div class="col-md-6 order-md-1">
             <div class="text-center">
               <h2 v-scroll-animation class="font-weight-bold">
-                Qui sommes nous ?
+                QUI SOMMES NOUS ?
               </h2>
-              <p v-scroll-animation class="lead">
+              <p v-scroll-animation class="lead" style="font: bold;">
                 Nous sommes l'Association des Femmes Chercheures de Côte d'Ivoire (AFEMC-CI), une organisation dédiée à la promotion des droits et de l'épanouissement professionnel des femmes dans l'enseignement supérieur et la recherche. Fondée le 14 janvier 1995, l'AFEMC-CI regroupe des enseignantes-chercheures et des chercheures de toutes les universités et centres de recherche en Côte d'Ivoire.
               </p>
               <NuxtLink v-scroll-animation to="/about" class="btn btn-primary btn-lg mt-3">
@@ -39,13 +36,13 @@
 
     <!-- Objectives Section -->
 
-    <ParcheminVue />
+    <NosObjectifs />
 
     <!-- News Section -->
-    <section id="news" class="py-5">
+    <section id="news" class="py-5" style="text-align: center;">
       <div class="container">
         <h2 class="font-weight-bold text-center">
-          Video à la une
+          A la une
         </h2>
         <div class="row">
           <!-- Featured News -->
@@ -76,15 +73,18 @@
 
     <!-- Contact Section -->
     <ContactVue />
+    <SliderVue />
   </div>
 </template>
 
 <script>
+import ContactVue from '~/components/ContactVue.vue'
 
 export default {
   name: 'IndexPage',
   components: {
     // Vous pouvez déclarer vos composants ici
+    ContactVue
   },
   data () {
     return {
@@ -171,5 +171,49 @@ export default {
 .custom-animation {
   animation: customFadeIn 1s ease-out forwards;
 }
+.btn{
+  background: none;
+  border-top: 5px solid #000000;
+  border-bottom: 5px solid #000000;
+  border-left: none;
+  border-right: none;
+  color: #000000;
+}
+.photo-stack {
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+  }
 
+  .photo-stack img {
+    width: 100%;
+    display: block;
+  }
+
+  .photo-top {
+    position: absolute;
+    top: 200px;
+    left: 70px;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .photo-middle {
+    position: absolute;
+    top: 40px;
+    left: 80%;
+    width: 25%;
+    border-radius: none;
+    z-index: 2;
+  }
+
+  .photo-bottom {
+    position: relative;
+    top: 200px;
+    left: 40%;
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+    z-index: 3;
+  }
   </style>

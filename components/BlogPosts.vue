@@ -14,7 +14,7 @@
             <!-- Utilisation du composant ReadMoreButton -->
             <ReadMoreButton :slug="article.slug" @selectArticle="selectArticle" />
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer text-muted" style="background-color: #02063F">
             {{ formatDate(article.date) }}
           </div>
         </div>

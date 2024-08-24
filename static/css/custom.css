@@ -41,13 +41,22 @@
 /* Styles pour les titres */
 h1, h2, h3 {
     font-family: Arial, sans-serif; /* Police conviviale (vous pouvez la personnaliser) */
-    color: blue; /* Couleur bleue pour les titres */
-    background-color: violet; /* Fond blanc pour les titres */
+    color: white; /* Couleur bleue pour les titres */
+    background-color: #FB0683; /* Couleur rose pour l'arrière-plan */
+    border: 1px solid #FB0683; /* Bordure de la même couleur que l'arrière-plan */
+    border-radius: 25px; /* Arrondir les bordures */
+    padding: 10px 20px; /* Ajuster le padding pour que le texte soit bien encadré */
+    display: inline-block; /* Pour que le padding et le border-radius fonctionnent correctement */
 }
 
 /* Sous-titres */
 h4, h5, h6 {
     font-family: Arial, sans-serif; /* Police conviviale (vous pouvez la personnaliser) */
     color: #8a2be2; /* Couleur violet clair pour les sous-titres */
-    background-color:white; /* Fond blanc pour les sous-titres */
+}
+
+no_general_class{
+    background-color: none;
+    border: none none none;
+    border-radius: none;
 }

@@ -2,7 +2,7 @@
   <section
     id="hero"
     class="hero-section text-white text-center py-5"
-    style="background: url('/images/hero-bg.png') no-repeat center center; background-size: cover; height: 378px;"
+    style="background: url('/images/contacthero.jpg') no-repeat center center; background-size: cover; height: 378px;"
   >
     <div
       class="container d-flex flex-column justify-content-center align-items-center h-100 animate__animated animate__fadeInUp"
@@ -10,14 +10,7 @@
       <div
         style=" padding: 40px; border-radius: 10px; margin: 0 8px;"
         class="hover-effect animate__animated animate__fadeInUp"
-      >
-        <h1
-          class="display-4 font-weight-bold animate__animated animate__fadeInUp"
-          style="color: whitesmoke; background-color: transparent;  text-shadow: 2px 2px 5px #000; animation: lightEffect 2s ease-in-out infinite; border-width: 5px; border-radius: 25%; padding: 30px; size: 10px;"
-        >
-          ACTUALITES <br> AFEMC-CI
-        </h1>
-      </div>
+      />
       <p
         class="lead animate__animated animate__fadeInUp"
         style="font-size: 18px; font-weight: bold;"

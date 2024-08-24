@@ -5,6 +5,24 @@
         <a class="navbar-brand" href="/">
           <img src="images/logo-AFEM-CI2.png" class="logo-img blink-animation" alt="Logo">
         </a>
+        <p style="font-weight: bold; margin-top: 2px;">
+          Association des Femmes <br>
+          Chercheures <br>
+          et Enseignants Chercheures de <br>
+          Côte d'Ivoire
+        </p>
+        <!-- Icônes des réseaux sociaux -->
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank" class="social-icon">
+            <i class="fab fa-facebook-f" />
+          </a>
+          <a href="https://www.instagram.com" target="_blank" class="social-icon">
+            <i class="fab fa-instagram" />
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin-in" />
+          </a>
+        </div>
         <button
           class="navbar-toggler"
           type="button"
@@ -17,22 +35,41 @@
         <div id="navbarSupportedContent" class="collapse navbar-collapse" :class="{ show: isMenuOpen }">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <NuxtLink to="/" class="nav-link fs-5 text-primary blink-animation" exact-active-class="active" @click.native="closeMenu">
+              <NuxtLink to="/" class="nav-link fs-5 blink-animation" exact-active-class="active" @click.native="closeMenu">
                 Accueil
               </NuxtLink>
             </li>
-            <li class="nav-item">
-              <NuxtLink to="/about" class="nav-link fs-5 text-primary blink-animation" exact-active-class="active" @click.native="closeMenu">
+            <li class="nav-item dropdown">
+              <a
+                id="navbarDropdown"
+                class="nav-link dropdown-toggle fs-5 blink-animation no-arrow"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 A Propos
-              </NuxtLink>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <NuxtLink to="/about" class="dropdown-item fs-5 blink-animation" exact-active-class="active" @click.native="closeMenu">
+                    Présentation
+                  </NuxtLink>
+                </li>
+                <li>
+                  <NuxtLink to="/about#missions" class="dropdown-item fs-5 blink-animation" exact-active-class="active" @click.native="closeMenu">
+                    Nos Missions
+                  </NuxtLink>
+                </li>
+              </ul>
             </li>
             <li class="nav-item">
-              <NuxtLink to="/actualite" class="nav-link fs-5 text-primary blink-animation" exact-active-class="active" @click.native="closeMenu">
+              <NuxtLink to="/actualite" class="nav-link fs-5 blink-animation" exact-active-class="active" @click.native="closeMenu">
                 Actualités
               </NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink to="/contact" class="nav-link fs-5 text-primary blink-animation" exact-active-class="active" @click.native="closeMenu">
+              <NuxtLink to="/contact" class="nav-link fs-5 blink-animation" exact-active-class="active" @click.native="closeMenu">
                 Contact
               </NuxtLink>
             </li>
@@ -63,19 +100,29 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+html {
+  scroll-behavior: smooth;
+}
+
 .logo-img {
   width: 80px;
 }
 
-.text-hover-purple:hover {
-  color: purple;
+.active, .dropdown-item.active {
+  font-weight: bold;
+  color: #FB0683; /* Couleur mise à jour */
+  text-decoration: underline;
+  text-decoration-color: #FB0683; /* Couleur de soulignement mise à jour */
 }
 
-.active {
-  font-weight: bold;
-  color: #007bff; /* Bootstrap's primary color */
-  text-decoration: underline; /* Added underline to active item */
-  text-decoration-color: #007bff; /* Changed underline color to match the text color */
+.nav-link, .dropdown-item {
+  color: #FB0683; /* Couleur mise à jour */
+}
+
+.nav-link:hover, .dropdown-item:hover {
+  color: #FB0683; /* Couleur sur hover mise à jour */
 }
 
 .blink-animation {
@@ -90,5 +137,37 @@ export default {
   0% { opacity: 1; }
   50% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+/* Masquer la flèche du menu déroulant */
+.no-arrow::after {
+  display: none;
+}
+
+/* Styles pour les icônes des réseaux sociaux */
+.social-icons {
+  position: absolute;
+  top: 10px;
+  right: 250px;
+  display: flex;
+  gap: 10px;
+  z-index: 1000; /* Assurez-vous que les icônes sont au-dessus du menu */
+}
+
+.social-icon {
+  color: #007bff; /* Couleur des icônes */
+  font-size: 24px; /* Taille des icônes */
+}
+
+.social-icon:hover {
+  color: #0056b3; /* Couleur des icônes au survol */
+}
+
+/* Styles pour positionner le menu à 10px du bas */
+.navbar {
+  position: relative; /* Positionne le menu par rapport à son conteneur */
+  bottom: 10px; /* Aligne le menu à 10px du bas de son conteneur */
+  margin-bottom: 0; /* Supprime la marge basse du menu */
+  padding-bottom: 0; /* Supprime le padding bas du menu */
 }
 </style>

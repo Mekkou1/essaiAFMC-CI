@@ -1,6 +1,6 @@
 <template>
-  <footer class="footer bg-dark py-4">
-    <h2 class="text-white text-center mb-4">
+  <footer class="footer  py-5" style="text-align: center;">
+    <h2 class="text-white text-center mb-4" style="background-color: #02063F;">
       Notre Réseau Partenaire
     </h2>
     <div class="container">

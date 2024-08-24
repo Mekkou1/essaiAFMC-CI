@@ -4,8 +4,8 @@
     <HeroAbout />
 
     <PresentationVue />
-    <div class="py-5 contener">
-      <div class="row">
+    <div class=" py-5 contener">
+      <div class="row missions">
         <div class="col-md-12 text-center">
           <h2 class="main-heading">
             Missions
@@ -18,7 +18,7 @@
       <div class="row">
         <div class="col-md-12 text-center">
           <h2 class="main-heading">
-            Gouvernance
+            Bureau Exécutif
           </h2>
         </div>
         <GouvernanceVue />
@@ -29,7 +29,6 @@
         <div class="col-md-12 text-center" />
       </div>
     </div>
-    <ContactVue />
   </div>
 </template>
 
