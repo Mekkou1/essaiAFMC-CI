@@ -26,7 +26,9 @@
     </div>
     <div class="py-5 contener" style="background-color: white;">
       <div class="row">
-        <div class="col-md-12 text-center" />
+        <div class="col-md-12 text-center">
+          <SliderVue />
+        </div>
       </div>
     </div>
   </div>
