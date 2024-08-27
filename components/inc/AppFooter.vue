@@ -67,7 +67,7 @@
                   <img src="images/linkdin.png" class="fab fa-linkedin-in" alt="linkedin" style="width: 40px; height: 40px;">
                 </a>
               </div>
-              <p>© 2024 . Tous droits réservés. Réaliser par: <a href="https://www.facebook.com/levelprod001?mibextid=LQQJ4d">Levelprod</a> / Développer par: <a href="https://www.techartisan./">TechArtisan</a> </p>
+              <p>© 2024 . Tous droits réservés. Réalisé par: <a href="https://www.facebook.com/levelprod001?mibextid=LQQJ4d">Levelprod</a> / Développé par: <a href="https://www.techartisan./">TechArtisan</a> </p>
             </div>
           </div>
         </div>

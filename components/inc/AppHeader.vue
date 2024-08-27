@@ -35,7 +35,7 @@
         <div id="navbarSupportedContent" class="collapse navbar-collapse" :class="{ show: isMenuOpen }">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <NuxtLink to="/" class="nav-link fs-5 blink-animation" exact-active-class="active" @click.native="closeMenu">
+              <NuxtLink to="/" class="nav-link fs-5 blink-animation" exact-active-class="active" @click.native="scrollToTop">
                 Accueil
               </NuxtLink>
             </li>
@@ -52,24 +52,24 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <NuxtLink to="/about" class="dropdown-item fs-5 blink-animation" exact-active-class="active" @click.native="closeMenu">
+                  <NuxtLink to="/about" class="dropdown-item fs-5 blink-animation" exact-active-class="active" @click.native="scrollToTop">
                     Présentation
                   </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink to="/about#missions" class="dropdown-item fs-5 blink-animation" exact-active-class="active" @click.native="closeMenu">
+                  <NuxtLink to="/about#missions" class="dropdown-item fs-5 blink-animation" exact-active-class="active" @click.native="scrollToTop">
                     Nos Missions
                   </NuxtLink>
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <NuxtLink to="/actualite" class="nav-link fs-5 blink-animation" exact-active-class="active" @click.native="closeMenu">
+              <NuxtLink to="/actualite" class="nav-link fs-5 blink-animation" exact-active-class="active" @click.native="scrollToTop">
                 Actualités
               </NuxtLink>
             </li>
             <li class="nav-item">
-              <NuxtLink to="/contact" class="nav-link fs-5 blink-animation" exact-active-class="active" @click.native="closeMenu">
+              <NuxtLink to="/contact" class="nav-link fs-5 blink-animation" exact-active-class="active" @click.native="scrollToTop">
                 Contact
               </NuxtLink>
             </li>
@@ -94,13 +94,16 @@ export default {
     },
     closeMenu () {
       this.isMenuOpen = false
+    },
+    scrollToTop () {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      this.closeMenu()
     }
   }
 }
 </script>
 
 <style scoped>
-
 html {
   scroll-behavior: smooth;
 }
