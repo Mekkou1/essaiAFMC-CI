@@ -4,35 +4,35 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 text-center">
-            <h1 style="background-color:transparent; color: white; size: 65px bold;">
+            <h1 style="background-color:transparent; color: white; font-size: 55px; font-weight: bold;">
               AFEMC-CI
             </h1>
             <img src="images/logo-AFEM-CI2.png" class="logo-img blink-animation" alt="Logo">
             <p class="mt-2">
-              Visites : <span id="counter">0</span>
+              Visites : <span id="counter">{{ visitCount }}</span>
             </p>
           </div>
           <div class="col-md-4 text-center text-white mt-3">
-            <div class="d-flex align-items-center mb-3" style="margin-top: 40px; text-align: left;text-size-adjust: 30px;">
-              <i class="fas fa-map-marker-alt mr-3" />
-              <p class="mb-0">
-                Abidjan Cocody Angré<br> Félix Ouphouet Bouagny<br> Université
+            <div class="d-flex align-items-center mb-3" style="margin-top: 40px; text-align: left;">
+              <img src="images/Localisation.png" class="fas fa-map-marker-alt mr-3">
+              <p class="mb-0" style="size: 20px;">
+                Abidjan Cocody Angré<br> Félix Houphouet Boigny<br> Université
               </p>
             </div>
             <div class="d-flex align-items-center mb-3">
-              <i class="fas fa-envelope mr-3" />
+              <img src="images/mail.png" class="fas fa-envelope mr-3">
               <p class="mb-0">
                 afemc-ci@yahoo.fr
               </p>
             </div>
             <div class="d-flex align-items-center mb-3">
-              <i class="fas fa-phone mr-3" />
+              <img src="images/telephone.png" class="fas fa-phone mr-3">
               <p class="mb-0">
-                0565668260 / 0707743501
+                0778094874 / 0789790600
               </p>
             </div>
           </div>
-          <div class="col-md-3 text-right text-white">
+          <div class="col-md-4 text-center text-white">
             <h1 style="background: transparent; border: none; font-size: 35px;">
               Contactez-nous
             </h1>
@@ -55,7 +55,19 @@
         <div class="py-3 text-white" style="background: #FB0683;">
           <div class="row">
             <div class="col-md-12 text-center">
-              <p>© 2024 . Tous droits réservés. Réaliser par: <a href="https://www.techartisan./">TechArtisan</a> </p>
+              <!-- Icônes des réseaux sociaux -->
+              <div class="social-icons d-flex justify-content-center mb-3">
+                <a href=" " target="_blank" class="social-icon">
+                  <img src="images/facebook.png" class="fab fa-facebook-f" alt="facebook" style="width: 40px; height: 40px;">
+                </a>
+                <a href=" " target="_blank" class="social-icon">
+                  <img src="images/instag.png" class="fab fa-instagram" alt="instagram" style="width: 40px; height: 40px;">
+                </a>
+                <a href=" " target="_blank" class="social-icon">
+                  <img src="images/linkdin.png" class="fab fa-linkedin-in" alt="linkedin" style="width: 40px; height: 40px;">
+                </a>
+              </div>
+              <p>© 2024 . Tous droits réservés. Réaliser par: <a href="https://www.facebook.com/levelprod001?mibextid=LQQJ4d">Levelprod</a> / Développer par: <a href="https://www.techartisan./">TechArtisan</a> </p>
             </div>
           </div>
         </div>
@@ -67,7 +79,23 @@
 <script>
 export default {
   name: 'AppFooter',
-  components: {
+  data () {
+    return {
+      visitCount: 0
+    }
+  },
+  mounted () {
+    // Récupérer le nombre de visites du localStorage
+    const visits = localStorage.getItem('visitCount')
+    if (visits) {
+      this.visitCount = parseInt(visits)
+    }
+
+    // Incrémenter le nombre de visites
+    this.visitCount++
+
+    // Stocker le nombre de visites dans le localStorage
+    localStorage.setItem('visitCount', this.visitCount)
   }
 }
 </script>
@@ -119,6 +147,15 @@ export default {
   margin-bottom: 1rem;
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon {
+  margin-left: 10px;
+}
+
 @media (max-width: 768px) {
   .footer-title {
     font-size: 1.2rem;
@@ -131,6 +168,18 @@ export default {
 
   .logo-img {
     width: 100px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .col-md-4 {
+    text-align: center;
+  }
+
+  .text-right {
+    text-align: center;
   }
 }
 
@@ -147,5 +196,22 @@ export default {
   .logo-img {
     width: 80px;
   }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .col-md-4 {
+    text-align: center;
+  }
+
+  .text-right {
+    text-align: center;
+  }
+}
+
+/* Ajout de l'image en arrière-plan */
+.container {
+  position: relative;
 }
 </style>

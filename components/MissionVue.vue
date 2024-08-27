@@ -98,4 +98,11 @@ export default {
 .mt-4 {
   margin-top: 1.5rem;
 }
+
+/* Media query pour cacher l'image sur les petits écrans */
+@media (max-width: 767px) {
+  .mission-image {
+    display: none;
+  }
+}
 </style>

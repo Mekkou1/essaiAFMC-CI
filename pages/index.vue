@@ -8,26 +8,22 @@
     <!-- About Section -->
     <section id="about" class="py-5">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6 order-md-2">
-            <div class="text-center">
-              <div class="photo-stack">
-                <img v-scroll-animation src="images/contact1.jpg" alt="Photo 2" class="photo-middle">
-                <img v-scroll-animation src="images/contact2.jpg" alt="Photo 3" class="photo-bottom">
-              </div>
-            </div>
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-left">
+            <h2 v-scroll-animation class="font-weight-bold">
+              QUI SOMMES NOUS ?
+            </h2>
+            <p v-scroll-animation class="lead" style="font-weight: bold;">
+              Nous sommes l'Association des Femmes Chercheures de Côte d'Ivoire (AFEMC-CI), une organisation dédiée à la promotion des droits et de l'épanouissement professionnel des femmes dans l'enseignement supérieur et la recherche. Fondée le 14 janvier 1995, l'AFEMC-CI regroupe des enseignantes-chercheures et des chercheures de toutes les universités et centres de recherche en Côte d'Ivoire.
+            </p>
+            <NuxtLink v-scroll-animation to="/about" class="btn btn-primary btn-lg mt-3">
+              En savoir plus
+            </NuxtLink>
           </div>
-          <div class="col-md-6 order-md-1">
-            <div class="text-center">
-              <h2 v-scroll-animation class="font-weight-bold">
-                QUI SOMMES NOUS ?
-              </h2>
-              <p v-scroll-animation class="lead" style="font: bold;">
-                Nous sommes l'Association des Femmes Chercheures de Côte d'Ivoire (AFEMC-CI), une organisation dédiée à la promotion des droits et de l'épanouissement professionnel des femmes dans l'enseignement supérieur et la recherche. Fondée le 14 janvier 1995, l'AFEMC-CI regroupe des enseignantes-chercheures et des chercheures de toutes les universités et centres de recherche en Côte d'Ivoire.
-              </p>
-              <NuxtLink v-scroll-animation to="/about" class="btn btn-primary btn-lg mt-3">
-                En savoir plus
-              </NuxtLink>
+          <div class="col-md-6 text-center d-none d-md-block">
+            <div class="photo-stack">
+              <img v-scroll-animation src="images/contact1.jpg" alt="Photo 2" class="photo-middle">
+              <img v-scroll-animation src="images/contact2.jpg" alt="Photo 3" class="photo-bottom">
             </div>
           </div>
         </div>
@@ -35,7 +31,6 @@
     </section>
 
     <!-- Objectives Section -->
-
     <NosObjectifs />
 
     <!-- News Section -->
@@ -156,8 +151,8 @@ export default {
 }
 </script>
 
-  <style scoped>
-  @keyframes customFadeIn {
+<style scoped>
+@keyframes customFadeIn {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -171,7 +166,8 @@ export default {
 .custom-animation {
   animation: customFadeIn 1s ease-out forwards;
 }
-.btn{
+
+.btn {
   background: none;
   border-top: 5px solid #000000;
   border-bottom: 5px solid #000000;
@@ -179,41 +175,83 @@ export default {
   border-right: none;
   color: #000000;
 }
+
 .photo-stack {
-    position: relative;
-    width: 100%;
-    max-width: 250px;
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.photo-stack img {
+  width: 100%;
+  display: block;
+}
+
+.photo-middle {
+  position: absolute;
+  top: 10px;
+  left: 60%;
+  width: 25%;
+  border-radius: none;
+  z-index: 2;
+}
+
+.photo-bottom {
+  position: relative;
+  top: 170px;
+  left: 20%;
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .photo-stack {
+    display: none; /* Masquer les images pour les petits écrans */
   }
 
-  .photo-stack img {
-    width: 100%;
-    display: block;
+  .hero-section h1 {
+    font-size: 50px; /* Réduire la taille de la police pour les petits écrans */
+    font-weight: 800;
+    margin: 20px 0; /* Ajuster les marges */
+    white-space: nowrap; /* Empêcher le retour à la ligne */
+    overflow: hidden; /* Masquer le débordement */
+    text-overflow: ellipsis; /* Ajouter des points de suspension si le texte est trop long */
   }
 
-  .photo-top {
-    position: absolute;
-    top: 200px;
-    left: 70px;
-    width: 100%;
-    z-index: 1;
+  .hero-section p {
+    font-size: 18px; /* Réduire la taille de la police du texte */
+    margin-top: 10px; /* Ajuster la marge supérieure */
   }
 
-  .photo-middle {
-    position: absolute;
-    top: 40px;
-    left: 80%;
-    width: 25%;
-    border-radius: none;
-    z-index: 2;
+  .hero-section marquee {
+    font-weight: 800px;
+    font-size: 40px; /* Ajuster la taille de la police du texte défilant */
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-stack {
+    display: none; /* Masquer les images pour les très petits écrans */
   }
 
-  .photo-bottom {
-    position: relative;
-    top: 200px;
-    left: 40%;
-    width: 50%;
-    height: 100%;
-    border-radius: 20px;
-    z-index: 3;
+  .hero-section h1 {
+    font-weight: 800px;
+    font-size: 30px; /* Réduire davantage la taille de la police pour les très petits écrans */
+    white-space: nowrap; /* Empêcher le retour à la ligne */
+    overflow: hidden; /* Masquer le débordement */
+    text-overflow: ellipsis; /* Ajouter des points de suspension si le texte est trop long */
   }
-  </style>
+
+  .hero-section p {
+    font-size: 16px; /* Réduire la taille de la police du texte pour les très petits écrans */
+    margin-top: 10px; /* Ajuster la marge supérieure */
+  }
+
+  .hero-section marquee {
+    font-size: 14px; /* Ajuster la taille de la police du texte défilant pour les très petits écrans */
+  }
+}
+</style>

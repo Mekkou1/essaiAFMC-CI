@@ -52,7 +52,6 @@
         <div class="col-md-6 photo-container">
           <div class="photo-stack">
             <img src="images/contact1.jpg" alt="Photo 2" class="photo-middle">
-            <img src="images/contact2.jpg" alt="Photo 3" class="photo-bottom">
           </div>
           <div class="thank-you-container">
             <p class="thank-you-text">
@@ -143,6 +142,8 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .contact-page {
   padding: 50px 0;
 }
@@ -200,31 +201,13 @@ export default {
   display: block;
 }
 
-.photo-top {
-  position: absolute;
-  top: 590px;
-  left: 270px;
-  width: 100%;
-  border: 20%;
-  z-index: 1;
-}
-
 .photo-middle {
   position: absolute;
   top: 20px;
-  left: 20px;
+  left: 0px;
   width: 100%;
   border-radius: 10%;
   z-index: 2;
-}
-
-.photo-bottom {
-  position: absolute;
-  top: 150px;
-  left: 20px;
-  width: 60%;
-  border-radius: 30%;
-  z-index: 3;
 }
 
 .thank-you-container {
@@ -234,8 +217,32 @@ export default {
 
 .thank-you-text {
   font-size: 60px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: anton, sans-serif;
   margin-top: 300px;
   text-align: center;
+}
+
+.thank-you-message {
+  font-family: 'pacifico', cursive;
+  font-style: italic;
+  display: inline-block;
+  margin-top: -10px; /* Ajustez cette valeur pour éviter l'interligne */
+  transform: rotate(-10deg);
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 768px) {
+  .photo-stack img {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+  }
+
+  .photo-container {
+    margin-left: 0; /* Réduire la marge à gauche pour centrer la photo */
+  }
+  .photo-middle{
+    margin-left: 0;
+  }
 }
 </style>

@@ -5,22 +5,22 @@
         <a class="navbar-brand" href="/">
           <img src="images/logo-AFEM-CI2.png" class="logo-img blink-animation" alt="Logo">
         </a>
-        <p style="font-weight: bold; margin-top: 2px;">
+        <p class="d-none d-lg-block" style="font-weight: bold; margin-top: 2px; font-size: 12px;">
           Association des Femmes <br>
           Chercheures <br>
           et Enseignants Chercheures de <br>
           Côte d'Ivoire
         </p>
         <!-- Icônes des réseaux sociaux -->
-        <div class="social-icons">
-          <a href="https://www.facebook.com" target="_blank" class="social-icon">
-            <i class="fab fa-facebook-f" />
+        <div class="social-icons d-none d-lg-flex">
+          <a href=" " target="_blank" class="social-icon">
+            <img src="images/facebook.png" class="fab fa-facebook-f" alt="facebook" style="width: 20px; height: 20px;">
           </a>
-          <a href="https://www.instagram.com" target="_blank" class="social-icon">
-            <i class="fab fa-instagram" />
+          <a href=" " target="_blank" class="social-icon">
+            <img src="images/instag.png" class="fab fa-instagram" alt="instagram" style="width: 20px; height: 20px;">
           </a>
-          <a href="https://www.linkedin.com" target="_blank" class="social-icon">
-            <i class="fab fa-linkedin-in" />
+          <a href=" " target="_blank" class="social-icon">
+            <img src="images/linkdin.png" class="fab fa-linkedin-in" alt="linkedin" style="width: 20px; height: 20px;">
           </a>
         </div>
         <button
@@ -100,7 +100,6 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
 html {
   scroll-behavior: smooth;
@@ -154,9 +153,9 @@ html {
   z-index: 1000; /* Assurez-vous que les icônes sont au-dessus du menu */
 }
 
-.social-icon {
-  color: #007bff; /* Couleur des icônes */
-  font-size: 24px; /* Taille des icônes */
+.social-icon img {
+  width: 20px;
+  height: 20px;
 }
 
 .social-icon:hover {
