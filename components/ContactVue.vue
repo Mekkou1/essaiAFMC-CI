@@ -2,7 +2,7 @@
   <!-- Contact Section -->
   <div class="col-md-12">
     <h1 class="main-heading no-global-styles" style="color: black; background-color: transparent;">
-      N'ésitez pas à nous contacter pour toutes vos préocupations
+      N'hésitez pas à nous contacter pour toutes vos préocupations
     </h1>
   </div>
 </template>
