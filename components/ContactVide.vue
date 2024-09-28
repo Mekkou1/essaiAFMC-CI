@@ -4,11 +4,11 @@
       <div class="row">
         <!-- Formulaire de contact à gauche -->
         <div class="col-md-6">
-          <h1 class="main-heading no-global-styles" style="color: black; background-color: transparent; border: transparent;">
-            Avez-vous des préoccupations ?
+          <h1 class="main-heading" style="color: black; font-size: 32px; font-weight: bold;background: none;border: none;">
+            Avez-vous une préoccupation ?
           </h1>
-          <p style="color: black; font-size: 20px;">
-            Contactez-nous par e-mail en remplissant le formulaire ci-dessous:
+          <p style="color: black; font-size: 18px; margin-bottom: 30px;">
+            Contactez-nous par e-mail en remplissant le formulaire ci-dessous :
           </p>
 
           <form>
@@ -25,7 +25,7 @@
               <input id="email" type="email" class="form-control" required>
             </div>
             <div class="form-group">
-              <label for="telephone">Téléphone</label>
+              <label for="telephone">Téléphone*</label>
               <input id="telephone" type="tel" class="form-control">
             </div>
             <div class="form-group">
@@ -51,12 +51,12 @@
         <!-- Photos à droite -->
         <div class="col-md-6 photo-container">
           <div class="photo-stack">
-            <img src="images/contact1.jpg" alt="Photo 2" class="photo-middle">
+            <img src="images/contact1.jpg" alt="Photo" class="photo-middle">
           </div>
           <div class="thank-you-container">
             <p class="thank-you-text">
               L'AFEMC-CI <br>
-              <span class="thank-you-message" style="font-size: 40px; font-style: italic;transform: rotate(-10deg);">vous remercie !</span>
+              <span class="thank-you-message">vous remercie !</span>
             </p>
           </div>
         </div>
@@ -64,7 +64,6 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
   name: 'IndexPage',
@@ -218,8 +217,9 @@ export default {
 .thank-you-text {
   font-size: 60px;
   font-family: anton, sans-serif;
-  margin-top: 300px;
+  margin-top: 250px;
   text-align: center;
+  color: #FB0683;
 }
 
 .thank-you-message {
@@ -227,7 +227,8 @@ export default {
   font-style: italic;
   display: inline-block;
   margin-top: -10px; /* Ajustez cette valeur pour éviter l'interligne */
-  transform: rotate(-10deg);
+  color: black;
+  /*transform: rotate(-10deg);*/
 }
 
 /* Media query pour les petits écrans */

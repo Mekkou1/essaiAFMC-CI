@@ -3,7 +3,7 @@ title: "Atelier sur l’attractivité des filières scientifiques pour les femme
 date: "2024-08-01"
 summary: "Du 28 au 29 Avril 2022 une délégation de l’Association des Femmes Chercheurs de Côte d’Ivoire (AFEMC-CI) conduite par sa 
 Présidente a effectué une mission à Lomé dans le cadre..."
-image: "/path/to/image.jpg"
+image: "/images/BANDEROLE.png"
 ---
 
 Du 28 au 29 Avril 2022 une délégation de l’Association des Femmes Chercheurs de Côte d’Ivoire (AFEMC-CI) conduite par sa Présidente a

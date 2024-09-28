@@ -1,9 +1,9 @@
 <template>
   <div class="blog-list container" style="margin-top: 30px;">
     <div class="row">
-      <div v-for="article in displayedArticles" :key="article.slug" class="col-md-4 mb-4">
-        <div class="card h-100">
-          <img :src="article.image" class="card-img-top" :alt="article.title">
+      <div v-for="article in articles" :key="article.slug" class="col-12 mb-4">
+        <div class="card h-100 d-flex flex-row">
+          <img :src="article.image" class="card-img-left" :alt="article.title">
           <div class="card-body">
             <h5 class="card-title">
               {{ truncateTitle(article.title) }}
@@ -14,27 +14,13 @@
             <!-- Utilisation du composant ReadMoreButton -->
             <ReadMoreButton :slug="article.slug" @selectArticle="selectArticle" />
           </div>
-          <div class="card-footer text-muted" style="background-color: #02063F;">
+          <!-- Commented out the date display -->
+          <!-- <div class="card-footer text-muted" style="background-color: #02063F;">
             {{ formatDate(article.date) }}
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
-
-    <!-- Pagination -->
-    <nav aria-label="Page navigation" class="mt-4">
-      <ul class="pagination justify-content-center">
-        <li class="page-item" :class="{ disabled: currentPage === 1 }">
-          <a class="page-link" href="#" @click.prevent="changePage(currentPage - 1)">Précédent</a>
-        </li>
-        <li v-for="page in totalPages" :key="page" class="page-item" :class="{ active: currentPage === page }">
-          <a class="page-link" href="#" @click.prevent="changePage(page)">{{ page }}</a>
-        </li>
-        <li class="page-item" :class="{ disabled: currentPage === totalPages }">
-          <a class="page-link" href="#" @click.prevent="changePage(currentPage + 1)">Suivant</a>
-        </li>
-      </ul>
-    </nav>
   </div>
 </template>
 
@@ -48,9 +34,7 @@ export default {
   },
   data () {
     return {
-      articles: [],
-      currentPage: 1,
-      articlesPerPage: 6
+      articles: []
     }
   },
   async fetch () {
@@ -58,16 +42,6 @@ export default {
       .only(['title', 'date', 'summary', 'slug', 'image'])
       .sortBy('date', 'desc')
       .fetch()
-  },
-  computed: {
-    totalPages () {
-      return Math.ceil(this.articles.length / this.articlesPerPage)
-    },
-    displayedArticles () {
-      const start = (this.currentPage - 1) * this.articlesPerPage
-      const end = start + this.articlesPerPage
-      return this.articles.slice(start, end)
-    }
   },
   methods: {
     formatDate (date) {
@@ -83,11 +57,6 @@ export default {
     truncateDescription (description, maxLength = 100) {
       return description.length > maxLength ? `${description.slice(0, maxLength)}...` : description
     },
-    changePage (page) {
-      if (page >= 1 && page <= this.totalPages) {
-        this.currentPage = page
-      }
-    },
     selectArticle (slug) {
       this.$store.dispatch('setSelectedArticleSlug', slug)
       this.$router.push('/actualite')
@@ -98,9 +67,23 @@ export default {
 </script>
 
 <style scoped>
-.card-img-top {
-  height: 200px;
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 15px; /* Bordures arrondies pour les cartes */
+  overflow: hidden; /* Pour s'assurer que les bordures arrondies sont appliquées correctement */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter une ombre légère pour améliorer la visibilité */
+}
+.card-img-left {
+  width: 144px; /* Augmenter la largeur de 20% par rapport à 120px */
+  height: 108px; /* Ajuster la hauteur pour maintenir le rapport d'aspect augmenté */
   object-fit: cover;
+  margin: 10px; /* Ajuster la marge pour s'adapter à l'image plus grande */
+  border-radius: 10px; /* Réduire le rayon de la bordure pour s'adapter à l'image plus grande */
+}
+.card-body {
+  flex: 1; /* Permet à la carte de s'étendre pour occuper l'espace restant */
 }
 .card-text {
   display: -webkit-box;

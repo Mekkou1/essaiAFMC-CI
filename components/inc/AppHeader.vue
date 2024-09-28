@@ -5,12 +5,6 @@
         <a class="navbar-brand" href="/">
           <img src="images/logo-AFEM-CI2.png" class="logo-img blink-animation" alt="Logo">
         </a>
-        <p class="d-none d-lg-block" style="font-weight: bold; margin-top: 2px; font-size: 12px;">
-          Association des Femmes <br>
-          Chercheures <br>
-          et Enseignants Chercheures de <br>
-          Côte d'Ivoire
-        </p>
         <!-- Icônes des réseaux sociaux -->
         <div class="social-icons d-none d-lg-flex">
           <a href=" " target="_blank" class="social-icon">
@@ -48,7 +42,7 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                A Propos
+                Afemc-ci
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
@@ -57,16 +51,45 @@
                   </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink to="/about#missions" class="dropdown-item fs-5 blink-animation" exact-active-class="active" @click.native="scrollToTop">
-                    Nos Missions
+                  <NuxtLink to="/organigramme" class="dropdown-item fs-5 blink-animation" exact-active-class="active" @click.native="scrollToTop">
+                    Organigramme
+                  </NuxtLink>
+                </li>
+                <li>
+                  <NuxtLink to="/structure" class="dropdown-item fs-5 blink-animation" exact-active-class="active" @click.native="scrollToTop">
+                    Structure et Fonctionnement
                   </NuxtLink>
                 </li>
               </ul>
             </li>
-            <li class="nav-item">
-              <NuxtLink to="/actualite" class="nav-link fs-5 blink-animation" exact-active-class="active" @click.native="scrollToTop">
-                Actualités
-              </NuxtLink>
+            <li class="nav-item dropdown">
+              <a
+                id="navbarDropdown"
+                class="nav-link dropdown-toggle fs-5 blink-animation no-arrow"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Actualité
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <NuxtLink to="/phototheque" class="dropdown-item fs-5 blink-animation" exact-active-class="active" @click.native="scrollToTop">
+                    Photothèque
+                  </NuxtLink>
+                </li>
+                <li>
+                  <NuxtLink to="/actualite" class="dropdown-item fs-5 blink-animation" exact-active-class="active" @click.native="scrollToTop">
+                    Activités et Cérémonies
+                  </NuxtLink>
+                </li>
+                <li>
+                  <NuxtLink to="/videotheque" class="dropdown-item fs-5 blink-animation" exact-active-class="active" @click.native="scrollToTop">
+                    Videothèque
+                  </NuxtLink>
+                </li>
+              </ul>
             </li>
             <li class="nav-item">
               <NuxtLink to="/contact" class="nav-link fs-5 blink-animation" exact-active-class="active" @click.native="scrollToTop">

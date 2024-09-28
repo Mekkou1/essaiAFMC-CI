@@ -41,6 +41,24 @@ export default {
           youtubeId: '2L8d_ihJ6_k',
           title: 'Journée mondiale du rein',
           description: 'Célébration de la journée Mondiale du rein avec le CNPTIR en partenariat avec l\'INSP.'
+        },
+        {
+          id: 3,
+          youtubeId: '25qKrGKqqSILFQAJ',
+          title: 'Journée ...',
+          description: 'Célébration de ...'
+        },
+        {
+          id: 4,
+          youtubeId: 'B95aCMEO_q0nxu5K',
+          title: 'Journée ...',
+          description: 'Célébration de ...'
+        },
+        {
+          id: 5,
+          youtubeId: '2jZX9v97VXIN6P0R',
+          title: 'Journée ...',
+          description: 'Célébration de ...'
         }
         // Ajoutez d'autres vidéos ici
       ]

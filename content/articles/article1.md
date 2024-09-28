@@ -2,7 +2,7 @@
 title: "Investiture de la Nouvelle Présidente de l'AFEMC-CI"
 date: "2022-08-02"
 summary: "Dr (MC) NOBAH Céline Sidonie Koco Epse KACOU-WODJE a été investie comme nouvelle présidente de l'Association des Femmes Chercheures de Côte d'Ivoire (AFEMC-CI), marquant une étape importante dans la promotion de l'égalité des genres dans le domaine de la recherche."
-image: "/images/investiture-presidente-afemc-ci.jpg"
+image: "/images/BANDEROLE.png"
 ---
 
 

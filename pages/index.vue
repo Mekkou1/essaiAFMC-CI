@@ -2,14 +2,22 @@
   <div>
     <!-- Hero Section -->
     <div>
-      <HeroIndex />
+      <HeroSlider />
     </div>
 
     <!-- About Section -->
     <section id="about" class="py-5">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-6 text-center text-md-left">
+          <!-- Image Section -->
+          <div class="col-md-6 text-center order-1 order-md-2 imagesection">
+            <div class="photo-stack">
+              <img v-scroll-animation src="images/contact1.jpg" alt="Photo 2" class="photo-middle">
+              <img v-scroll-animation src="images/contact2.jpg" alt="Photo 3" class="photo-bottom">
+            </div>
+          </div>
+          <!-- Text Section -->
+          <div class="col-md-6 text-center text-md-left order-2 order-md-1">
             <h2 v-scroll-animation class="font-weight-bold">
               QUI SOMMES NOUS ?
             </h2>
@@ -20,12 +28,6 @@
               En savoir plus
             </NuxtLink>
           </div>
-          <div class="col-md-6 text-center d-none d-md-block">
-            <div class="photo-stack">
-              <img v-scroll-animation src="images/contact1.jpg" alt="Photo 2" class="photo-middle">
-              <img v-scroll-animation src="images/contact2.jpg" alt="Photo 3" class="photo-bottom">
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -33,6 +35,7 @@
     <!-- Objectives Section -->
     <NosObjectifs />
 
+    <!-- News Section -->
     <!-- News Section -->
     <section id="news" class="py-5" style="text-align: center;">
       <div class="container">
@@ -48,7 +51,12 @@
                   Investiture de la Présidente
                 </h5>
                 <div class="embed-responsive embed-responsive-16by9 mb-3">
-                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5DKPkFZF95A" allowfullscreen />
+                  <iframe
+                    class="embed-responsive-item youtube-video"
+                    src="https://www.youtube.com/embed/5DKPkFZF95A"
+                    allowfullscreen
+                    style="width: 100%; height: 450px;"
+                  />
                 </div>
                 <marquee width="300" scrollamount="300" scrolldelay="5000" style="color: red;">
                   Rejoignez-nous pour célébrer l'investiture de notre nouvelle présidente. Regardez la vidéo pour en savoir plus sur son discours et ses projets pour l'association.
@@ -78,13 +86,10 @@ import ContactVue from '~/components/ContactVue.vue'
 export default {
   name: 'IndexPage',
   components: {
-    // Vous pouvez déclarer vos composants ici
     ContactVue
   },
   data () {
-    return {
-      // Vous pouvez déclarer vos données ici
-    }
+    return {}
   },
   head () {
     return {
@@ -179,7 +184,7 @@ export default {
 .photo-stack {
   position: relative;
   width: 100%;
-  max-width: 250px;
+  max-width: 250px; /* Limiter la largeur des images */
   margin: 0 auto;
 }
 
@@ -190,7 +195,7 @@ export default {
 
 .photo-middle {
   position: absolute;
-  top: 10px;
+  top: 10px; /* Ajustez cette valeur pour la superposition */
   left: 60%;
   width: 25%;
   border-radius: none;
@@ -199,7 +204,7 @@ export default {
 
 .photo-bottom {
   position: relative;
-  top: 170px;
+  top: 170px; /* Ajustez cette valeur pour la superposition */
   left: 20%;
   width: 50%;
   height: 100%;
@@ -208,50 +213,49 @@ export default {
 }
 
 @media (max-width: 768px) {
-  .photo-stack {
-    display: none; /* Masquer les images pour les petits écrans */
+  .imagesection {
+    margin-bottom: 20px; /* Espace sous la section d'image */
+  }
+  .photo-stack img {
+  display: none;
+}
+  /* Garder les images superposées */
+  .photo-middle {
+    left: 50%; /* Centrer sur petit écran */
   }
 
-  .hero-section h1 {
-    font-size: 50px; /* Réduire la taille de la police pour les petits écrans */
-    font-weight: 800;
-    margin: 20px 0; /* Ajuster les marges */
-    white-space: nowrap; /* Empêcher le retour à la ligne */
-    overflow: hidden; /* Masquer le débordement */
-    text-overflow: ellipsis; /* Ajouter des points de suspension si le texte est trop long */
+  .photo-bottom {
+    top: 150px; /* Ajustez cette valeur pour la superposition */
+    left: 0%; /* Ajustez si nécessaire */
+    width: 60%; /* Ajustez pour le petit écran */
   }
-
-  .hero-section p {
-    font-size: 18px; /* Réduire la taille de la police du texte */
-    margin-top: 10px; /* Ajuster la marge supérieure */
-  }
-
-  .hero-section marquee {
-    font-weight: 800px;
-    font-size: 40px; /* Ajuster la taille de la police du texte défilant */
-  }
+  .youtube-video {
+  max-width: 100%; /* S'assure que le lecteur ne dépasse pas la largeur de son conteneur */
+  height: auto; /* Ajuste la hauteur automatiquement pour maintenir le ratio */
+}
 }
 
 @media (max-width: 480px) {
-  .photo-stack {
-    display: none; /* Masquer les images pour les très petits écrans */
+  .imagesection {
+    margin-bottom: 20px; /* Espace sous la section d'image */
+  }
+  .photo-stack img {
+  display: none;
+}
+
+  /* Garder les images superposées */
+  .photo-middle {
+    left: 50%; /* Centrer sur très petit écran */
   }
 
-  .hero-section h1 {
-    font-weight: 800px;
-    font-size: 30px; /* Réduire davantage la taille de la police pour les très petits écrans */
-    white-space: nowrap; /* Empêcher le retour à la ligne */
-    overflow: hidden; /* Masquer le débordement */
-    text-overflow: ellipsis; /* Ajouter des points de suspension si le texte est trop long */
+  .photo-bottom {
+    top: 140px; /* Ajustez cette valeur pour la superposition */
+    left: 0%; /* Ajustez si nécessaire */
+    width: 70%; /* Ajustez pour le très petit écran */
   }
-
-  .hero-section p {
-    font-size: 16px; /* Réduire la taille de la police du texte pour les très petits écrans */
-    margin-top: 10px; /* Ajuster la marge supérieure */
-  }
-
-  .hero-section marquee {
-    font-size: 14px; /* Ajuster la taille de la police du texte défilant pour les très petits écrans */
-  }
+  .youtube-video {
+  max-width: 100%; /* S'assure que le lecteur ne dépasse pas la largeur de son conteneur */
+  height: auto; /* Ajuste la hauteur automatiquement pour maintenir le ratio */
+}
 }
 </style>

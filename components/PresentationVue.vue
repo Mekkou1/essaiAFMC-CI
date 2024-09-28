@@ -45,9 +45,13 @@ export default {
 
 <style scoped>
 .image-container {
-  background-color: rgb(192, 189, 189);
+  background-color: #02063F;
   padding: 20px;
   border-radius: 10px;
   display: inline-block;
+}
+.img-fluid{
+  border: 5px solid #FB0683; /* Couleur et épaisseur de la bordure */
+
 }
 </style>

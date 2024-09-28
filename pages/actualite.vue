@@ -1,29 +1,15 @@
 <template>
   <div>
-    <HeroActualite /><br>
+    <HeroActualite />
+    <h2 class="head-title">
+      Activités et cérémonies
+    </h2><br>
 
     <div v-if="selectedArticleSlug">
       <ArticleDetail :slug="selectedArticleSlug" @close="closeArticle" />
     </div>
     <div v-else>
       <BlogList />
-    </div>
-
-    <div class="container">
-      <VideoGallery />
-    </div><br>
-
-    <div class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <img src="/images/bibliotheque.jpg" alt="Illustration de la bibliothèque" class="img-fluid rounded shadow-sm mb-4">
-          </div>
-          <div class="col-md-6">
-            <LibrairyVue />
-          </div>
-        </div>
-      </div>
     </div>
     <SliderVue />
   </div>
@@ -33,8 +19,6 @@
 import { mapGetters } from 'vuex'
 import BlogList from '~/components/BlogList.vue'
 import ArticleDetail from '~/components/ArticleDetail.vue'
-import LibrairyVue from '~/components/LibrairyVue.vue'
-import VideoGallery from '~/components/VideoGallery.vue'
 import HeroActualite from '~/components/HeroActualite.vue'
 import SliderVue from '~/components/SliderVue.vue'
 
@@ -90,8 +74,6 @@ export default {
   components: {
     BlogList,
     ArticleDetail,
-    LibrairyVue,
-    VideoGallery,
     HeroActualite,
     SliderVue
   },
@@ -107,3 +89,21 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+/* Ajouter une règle pour éviter les barres de navigation latérales */
+html, body {
+    overflow-x: hidden; /* Supprime le défilement horizontal global */
+}
+.head-title {
+    background-color: #02063F;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    width: 100%; /* Prendre toute la largeur du conteneur */
+    text-align: center; /* Centrer le texte */
+    margin: 0; /* Supprimer les marges par défaut */
+    padding: 10px 0; /* Ajouter un peu d'espace autour du texte pour améliorer l'apparence */
+    border-radius: 0; /* Assurer qu'il n'y a pas de bord arrondi */
+}
+</style>

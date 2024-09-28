@@ -1,10 +1,15 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <HeroAbout />
+    <div>
+      <HeroAbout />
+      <h2 class="head-title">
+        Présentation
+      </h2>
+    </div>
 
     <PresentationVue />
-    <div class=" py-5 contener">
+    <div class="py-5 contener">
       <div class="row missions">
         <div class="col-md-12 text-center">
           <h2 class="main-heading">
@@ -13,16 +18,10 @@
         </div>
         <MissionVue />
       </div>
-    </div>
-    <div class="py-5 contener">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <h2 class="main-heading">
-            Bureau Exécutif
-          </h2>
-        </div>
-        <GouvernanceVue />
-      </div>
+      <!-- Objectives Section -->
+      <NosObjectifs />
+      <!-- Ressources Section -->
+      <RessourcesVue />
     </div>
     <div class="py-5 contener" style="background-color: white;">
       <div class="row">
@@ -35,61 +34,40 @@
 </template>
 
 <script>
-
 export default {
   name: 'About',
   head () {
     return {
       title: 'A propos',
       meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Découvrez l\'Association des Femmes Chercheures de Côte d\'Ivoire (AFEM-CI), une communauté de femmes engagées dans la recherche scientifique et l\'enseignement supérieur.'
-        },
-        {
-          hid: 'keywords',
-          name: 'keywords',
-          content: 'AFEM-CI, Femmes Chercheures, Enseignement supérieur, Recherche scientifique, Promotion professionnelle, Renforcement de capacités, Financements, Adhésion, Côte d\'Ivoire, Association, Femmes, Chercheures, Côte d\'Ivoire, AFEMCI'
-        },
-        {
-          hid: 'og:title',
-          property: 'og:title',
-          content: 'A propos - AFEM-CI'
-        },
-        {
-          hid: 'og:description',
-          property: 'og:description',
-          content: 'Découvrez l\'Association des Femmes Chercheures de Côte d\'Ivoire (AFEM-CI), une communauté de femmes engagées dans la recherche scientifique et l\'enseignement supérieur.'
-        },
-        {
-          hid: 'og:image',
-          property: 'og:image',
-          content: '/images/afemci-logo.png'
-        },
-        {
-          hid: 'og:url',
-          property: 'og:url',
-          content: 'https://afemci.ci/a-propos'
-        },
-        {
-          hid: 'twitter:title',
-          name: 'twitter:title',
-          content: 'A propos - AFEM-CI'
-        },
-        {
-          hid: 'twitter:description',
-          name: 'twitter:description',
-          content: 'Découvrez l\'Association des Femmes Chercheures de Côte d\'Ivoire (AFEM-CI), une communauté de femmes engagées dans la recherche scientifique et l\'enseignement supérieur.'
-        },
-        {
-          hid: 'twitter:image',
-          name: 'twitter:image',
-          content: '/assets/images/afemci-logo.png'
-        }
+        // (vos métadonnées ici)
       ]
     }
   }
-
 }
 </script>
+
+<style scoped>
+.head-title {
+    background-color: #02063F;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    border-radius: 0;
+}
+
+.contener {
+  overflow-x: hidden; /* Évite le défilement horizontal */
+}
+
+/* Styles supplémentaires pour assurer une mise en page fluide */
+@media (max-width: 768px) {
+  .head-title {
+    font-size: 20px; /* Ajuste la taille de police pour les petits écrans */
+  }
+}
+</style>

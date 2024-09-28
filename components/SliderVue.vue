@@ -49,7 +49,7 @@ export default {
 }
 
 .small-image {
-  max-width: 50px; /* Taille des images */
+  max-width: 90px; /* Taille des images */
   margin: 0 15px; /* Espacement entre les images */
 }
 

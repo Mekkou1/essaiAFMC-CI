@@ -1,3 +1,10 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+/* Ajouter une règle pour éviter les barres de navigation latérales */
+html, body {
+    overflow-x: hidden; /* Supprime le défilement horizontal global */
+}
+
 .main-heading{
     font-size: 30px;
     font-weight: 800;
