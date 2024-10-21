@@ -34,8 +34,8 @@ export default {
   data () {
     return {
       executiveMembers: [
-        { name: 'Dr(MC) NOBAH KACOU-WODJE ', position: 'Présidente', photo: '/images/presidenteok.jpg' },
-        { name: 'Dr(MC) OUATTARA FATOU SCHERAZADE EPSE SORO', position: 'Vice-Présidente', photo: '/images/vicepresidente.png' }
+        { name: 'PROFESSEURE TIDOU ABIBA SANOGO EPSE KONE. ', position: 'Présidente de 1996 à 2015', photo: '/images/identite.jpeg' },
+        { name: 'PROFESSEURE RITA KAKOU EPSE YAO', position: 'Présidente de 2016 à 2022', photo: '/images/identite.jpeg' }
       ]
     }
   }

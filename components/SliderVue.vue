@@ -11,6 +11,8 @@
           <img src="images/inphb.png" alt="Image 3" class="small-image">
           <img src="images/ufhb.png" alt="Image 4" class="small-image">
           <img src="images/una.png" alt="Image 5" class="small-image">
+          <img src="images/injs.png" alt="Image 5" class="small-image">
+          <img src="images/udb.png" alt="Image 5" class="small-image">
           <img src="images/uao.png" alt="Image 6" class="small-image">
           <img src="images/usp.png" alt="Image 7" class="small-image">
           <img src="images/ugpc.png" alt="Image 8" class="small-image">

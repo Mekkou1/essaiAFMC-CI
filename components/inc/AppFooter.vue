@@ -16,13 +16,13 @@
             <div class="d-flex align-items-center mb-3" style="text-align: left;">
               <img src="images/Localisation.png" class="fas fa-map-marker-alt mr-3">
               <p class="mb-0" style="font-size: 20px;">
-                Abidjan Cocody Angré<br> Félix Houphouet Boigny<br> Université
+                Siège: Ecole Normale Supérieure d'Abidjan
               </p>
             </div>
             <div class="d-flex align-items-center mb-3">
               <img src="images/mail.png" class="fas fa-envelope mr-3">
               <p class="mb-0">
-                afemc-ci@yahoo.fr
+                afemcci@gmail.com
               </p>
             </div>
             <div class="d-flex align-items-center mb-3">

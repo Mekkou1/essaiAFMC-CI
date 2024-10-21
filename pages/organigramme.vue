@@ -42,7 +42,7 @@
       <div class="row">
         <div class="col-md-12 text-center">
           <h2 class="main-heading" style="background-color: #FEBCE0;">
-            COMMITE D'ORGANISATION ET SCIENTIFIQUE
+            COMMITE D'ORIENTATION ET SCIENTIFIQUE
           </h2>
         </div>
         <ComiteScientifique />
@@ -66,6 +66,16 @@
           </h2>
         </div>
         <MembresHonneur />
+      </div>
+    </div>
+    <div class="py-5 contener">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2 class="main-heading" style="background-color: #2e2b6f;">
+            MEMBRES FONDATEURS
+          </h2>
+        </div>
+        <FonderMenbers />
       </div>
     </div>
     <div class="py-5 contener">

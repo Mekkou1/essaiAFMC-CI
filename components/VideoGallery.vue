@@ -25,87 +25,58 @@
 </template>
 
 <script>
+// Importation des données depuis le fichier externalisé
+import { videos } from '@/assets/data/videogalleryData'
+
 export default {
   name: 'VideoGallery',
   data () {
     return {
-      videos: [
-        {
-          id: 1,
-          youtubeId: '5DKPkFZF95A',
-          title: 'Investiture de la Présidente',
-          description: 'Cérémonie d\'investiture de la nouvelle présidente de l\'association.'
-        },
-        {
-          id: 2,
-          youtubeId: '2L8d_ihJ6_k',
-          title: 'Journée mondiale du rein',
-          description: 'Célébration de la journée Mondiale du rein avec le CNPTIR en partenariat avec l\'INSP.'
-        },
-        {
-          id: 3,
-          youtubeId: '25qKrGKqqSILFQAJ',
-          title: 'Journée ...',
-          description: 'Célébration de ...'
-        },
-        {
-          id: 4,
-          youtubeId: 'B95aCMEO_q0nxu5K',
-          title: 'Journée ...',
-          description: 'Célébration de ...'
-        },
-        {
-          id: 5,
-          youtubeId: '2jZX9v97VXIN6P0R',
-          title: 'Journée ...',
-          description: 'Célébration de ...'
-        }
-        // Ajoutez d'autres vidéos ici
-      ]
+      videos // Utilisation directe des données importées
     }
   }
 }
 </script>
 
-  <style scoped>
-  .video-gallery {
-    padding: 2rem 0;
-  }
+<style scoped>
+.video-gallery {
+  padding: 2rem 0;
+}
 
-  .card {
-    height: 100%;
-    padding: 0;
-    overflow: hidden;
-  }
+.card {
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+}
 
-  .video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
-    overflow: hidden;
-  }
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
 
-  .video-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
-  .card-body {
-    padding: 1rem;
-  }
+.card-body {
+  padding: 1rem;
+}
 
-  .card-title {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
+.card-title {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
 
-  .card-text {
-    font-size: 0.9rem;
-    margin-bottom: 0;
-  }
-  </style>
+.card-text {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+</style>

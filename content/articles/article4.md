@@ -1,14 +1,8 @@
 ---
-title: "Atelier sur l’attractivité des filières scientifiques pour les femmes"
+title: "FORMATION A L’UTILISATION DE LA PLATE FORME D’ENSEIGNEMENT MOODLE"
 date: "2024-08-07"
-summary: "Du 28 au 29 Avril 2022 une délégation de l’Association des Femmes Chercheurs de Côte d’Ivoire (AFEMC-CI) conduite par sa 
-Présidente a effectué une mission à Lomé dans le cadre..."
-image: "/images/BANDEROLE.png"
+summary: "La formation à l'utilisation de la plate forme d'enseignement moodle..."
+image: "/images/moodle.png"
 ---
 
-Du 28 au 29 Avril 2022 une délégation de l’Association des Femmes Chercheurs de Côte d’Ivoire (AFEMC-CI) conduite par sa Présidente a
-effectué une mission à Lomé dans le cadre d’un atelier sur le thème ‘L’attractivité des filières scientifiques pour les femmes’
-organisé par la CIRUISEF en collaboration avec la Faculté des Sciences (FDS) de l’Université de Lomé. La mission visait à participer à
-des rencontres de partage d’expérience sur le tutorat-mentorat des étudiantes en sciences fondamentales et expérimentales. Au terme de
-cet atelier, la délégation ivoirienne très enrichie par l’expérience de leurs homologues togolaises compte s’en inspirer pour mieux
-organiser le tutorat-mentorat au niveau de l’AFEMC-CI.
+La formation à l'utilisation de la plate forme d'enseignement moodle...

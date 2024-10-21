@@ -20,7 +20,7 @@
                 </p>
               </div>
               <div class="mission-image">
-                <img src="/images/mission.jpg" alt="Mission Image" class="img-fluid rounded-circle">
+                <img src="/images/missions.png" alt="Mission Image" class="img-fluid rounded-circle">
               </div>
             </div>
           </div>
@@ -105,4 +105,4 @@ export default {
     display: none;
   }
 }
-</style>
+</style> externaliser les données de ce composant dans un fichier data.js

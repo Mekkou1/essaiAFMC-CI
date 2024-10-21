@@ -51,13 +51,10 @@
         <!-- Photos à droite -->
         <div class="col-md-6 photo-container">
           <div class="photo-stack">
-            <img src="images/contact1.jpg" alt="Photo" class="photo-middle">
+            <img src="images/contactimg2.jpg" alt="Photo" class="photo-middle">
           </div>
           <div class="thank-you-container">
-            <p class="thank-you-text">
-              L'AFEMC-CI <br>
-              <span class="thank-you-message">vous remercie !</span>
-            </p>
+            <img src="images/merci.jpg" alt="Photo" class="photo">
           </div>
         </div>
       </div>
@@ -213,24 +210,9 @@ export default {
   text-align: center;
   margin-top: 200px;
 }
-
-.thank-you-text {
-  font-size: 60px;
-  font-family: anton, sans-serif;
-  margin-top: 250px;
-  text-align: center;
-  color: #FB0683;
+.photo{
+  margin-top: 35px;
 }
-
-.thank-you-message {
-  font-family: 'pacifico', cursive;
-  font-style: italic;
-  display: inline-block;
-  margin-top: -10px; /* Ajustez cette valeur pour éviter l'interligne */
-  color: black;
-  /*transform: rotate(-10deg);*/
-}
-
 /* Media query pour les petits écrans */
 @media (max-width: 768px) {
   .photo-stack img {

@@ -1,4 +1,11 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
+@font-face {
+    font-family: 'plans';
+    src: url('~static/fonts/plans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
 
 /* Ajouter une règle pour éviter les barres de navigation latérales */
 html, body {

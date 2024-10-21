@@ -27,7 +27,7 @@ export default {
     return {
       galleryGroups: [
         {
-          title: 'Audiences',
+          title: 'Partenariats',
           coverImage: '/images/audiance.jpg',
           slug: 'audiences'
         },

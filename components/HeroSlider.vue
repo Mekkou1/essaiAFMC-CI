@@ -2,41 +2,35 @@
   <header class="hero-slider" style="background-color: blue;">
     <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="/images/hero_bg.jpg" class="d-block w-100" alt="Image 1">
-        </div>
-        <div class="carousel-item">
-          <img src="/images/obj.jpg" class="d-block w-100" alt="Image 2">
-        </div>
-        <div class="carousel-item">
-          <img src="/images/slide2.jpg" class="d-block w-100" alt="Image 3">
+        <div v-for="(slide, index) in herosliderData.slides" :key="index" :class="['carousel-item', { active: index === 0 }]">
+          <img :src="slide.image" class="d-block w-100" :alt="slide.alt">
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true" />
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true" />
-        <span class="visually-hidden">Next</span>
-      </button>
-      <div class="overlay-content">
-        <h1 class="display-4 font-weight-bold title">
-          AFEMC-CI
-        </h1>
-        <div class="search-bar">
-          <div class="input-group">
-            <input
-              v-model="searchQuery"
-              type="text"
-              class="form-control"
-              placeholder="Rechercher dans..."
-              @keyup.enter="performSearch"
-            >
-            <button class="btn btn-primary search-button" @click="performSearch">
-              <i class="bi bi-search" />
-            </button>
-          </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true" />
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true" />
+      <span class="visually-hidden">Next</span>
+    </button>
+    <div class="overlay-content">
+      <h1 class="display-4 font-weight-bold title">
+        {{ herosliderData.title }}
+      </h1>
+      <div class="search-bar">
+        <div class="input-group">
+          <input
+            v-model="searchQuery"
+            type="text"
+            class="form-control"
+            placeholder="Rechercher dans..."
+            @keyup.enter="performSearch"
+          >
+          <button class="btn btn-primary search-button" @click="performSearch">
+            <i class="bi bi-search" />
+          </button>
         </div>
       </div>
     </div>
@@ -44,9 +38,12 @@
 </template>
 
 <script>
+import herosliderData from '~/assets/data/herosliderData'
+
 export default {
   data () {
     return {
+      herosliderData, // Importing carousel data
       searchQuery: '' // The search input
     }
   },
@@ -133,7 +130,9 @@ export default {
 }
 
 .title {
-  font-family: anton, sans-serif;
+  font-family: plans, sans-serif;/* anton */
+  font-size: 90px;
+  font-weight: bold;
   color: #02063F; /* Set the text color */
   background-color: transparent;
   border: none;
@@ -144,31 +143,28 @@ export default {
     2px 2px 0 white;    /* Bottom-right shadow */
   margin-bottom: 20px;
 }
-
 .search-bar {
   position: relative;
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  display: flex; /* Pour aligner le champ de recherche et le bouton */
 }
 
 .search-bar .form-control {
-  padding-right: 0px; /* Make room for the button */
   border-radius: 50px;
+  flex: 1; /* Prend tout l'espace restant */
+  padding-right: 15px; /* Ajoute un espace pour éviter que le texte touche le bouton */
 }
 
 .search-bar .search-button {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%; /* Adjusts button height to match input field height */
-  background: #FB0683; /* Button background color */
+  background: #FB0683;
   border: none;
   color: white;
-  border-radius: 0px 50px 50px 0px;
+  border-radius: 50px;
   padding: 0 20px;
   cursor: pointer;
-  z-index: 1; /* Ensures the button is above the input field */
+  margin-left: 10px; /* Espace entre le champ et le bouton */
 }
 
 .search-bar .search-button i {

@@ -1,6 +1,6 @@
 <template>
   <section id="hero" class="hero-section text-white text-center py-5">
-    <img src="/images/bn_actualite.jpg" alt="Actualités" class="hero-image">
+    <img src="/images/heroactualites.png" alt="Actualités" class="hero-image">
     <div class="container d-flex flex-column justify-content-center align-items-center h-100 animate__animated animate__fadeInUp">
       <div style="padding: 40px; border-radius: 10px; margin: 0 8px;" class="hover-effect animate__animated animate__fadeInUp">
         <h1 class="display-4 font-weight-bold title animate__animated animate__fadeInUp">
@@ -42,6 +42,7 @@
   }
   .title {
   color: #02063F; /* Applique la couleur au texte */
+  font-weight: bold;
   background-color: transparent;
   border: 5px solid #FB0683 ;
   text-shadow:

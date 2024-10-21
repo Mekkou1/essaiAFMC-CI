@@ -28,8 +28,10 @@
 </template>
 
 <script>
-import ImageGallery from '@/components/ImageGallery.vue' // Adjust the path as needed
-import PhotoGallery from '@/components/PhotoGallery.vue' // Adjust the path as needed
+// Importation des données externalisées
+import { photoSections } from '@/assets/data/photothequeData'
+import ImageGallery from '@/components/ImageGallery.vue' // Chemin ajusté si nécessaire
+import PhotoGallery from '@/components/PhotoGallery.vue' // Chemin ajusté si nécessaire
 
 export default {
   name: 'PhotothequePage',
@@ -39,40 +41,16 @@ export default {
   },
   data () {
     return {
-      selectedPhotoSection: null, // Keeps track of which section to show
-      photoSections: {
-        audiences: {
-          title: 'Audiences',
-          photos: [
-            '/images/audiance.jpg',
-            '/images/audiance3.jpg'
-            // Add more image paths here
-          ]
-        },
-        'journee-scientifique': {
-          title: 'Journée scientifique',
-          photos: [
-            '/images/audiance2.jpg',
-            '/images/seminaire1.jpg',
-            '/images/remise.jpg',
-            '/images/goupe.jpg',
-            '/images/groupe2.jpg',
-            '/images/allocpresidente.jpg',
-            '/images/journee.jpg'
-
-            // Add more image paths here
-          ]
-        }
-      }
+      selectedPhotoSection: null // Gère la section affichée
     }
   },
   methods: {
     showSection (slug) {
-      // Set the selected photo section based on the slug
-      this.selectedPhotoSection = this.photoSections[slug]
+      // Définir la section de photos sélectionnée à partir du slug
+      this.selectedPhotoSection = photoSections[slug]
     },
     goBack () {
-      // Reset to show ImageGallery again
+      // Réinitialiser pour afficher à nouveau la galerie d'images principale
       this.selectedPhotoSection = null
     }
   }

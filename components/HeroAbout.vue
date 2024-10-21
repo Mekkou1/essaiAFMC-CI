@@ -2,7 +2,7 @@
   <section
     id="hero"
     class="hero-section text-white text-center py-5"
-    style="background: url('/images/presentation.jpg') no-repeat center center; background-size: cover; height: 378px; overflow-x: hidden;"
+    style="background: url('/images/heroafemcci.jpg') no-repeat center center; background-size: cover; height: 378px; overflow-x: hidden;"
   >
     <div
       class="container d-flex flex-column justify-content-center align-items-center h-100 animate__animated animate__fadeInUp"
@@ -33,6 +33,7 @@
 }
 .title {
   color: #02063F; /* Applique la couleur au texte */
+  font-weight: bold;
   background-color: transparent;
   border: 5px solid #FB0683 ;
   text-shadow:

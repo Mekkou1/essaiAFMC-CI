@@ -2,7 +2,7 @@
   <section
     id="hero"
     class="hero-section text-white text-center py-5"
-    style="background: url('/images/bn_contact.jpg') no-repeat center center; background-size: cover; height: 378px;"
+    style="background: url('/images/herocontact.jpg') no-repeat center center; background-size: cover; height: 378px;"
   >
     <div
       class="container d-flex flex-column justify-content-center align-items-center h-100 animate__animated animate__fadeInUp"

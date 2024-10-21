@@ -6,74 +6,21 @@
     </div>
 
     <!-- About Section -->
-    <section id="about" class="py-5">
-      <div class="container">
-        <div class="row align-items-center">
-          <!-- Image Section -->
-          <div class="col-md-6 text-center order-1 order-md-2 imagesection">
-            <div class="photo-stack">
-              <img v-scroll-animation src="images/contact1.jpg" alt="Photo 2" class="photo-middle">
-              <img v-scroll-animation src="images/contact2.jpg" alt="Photo 3" class="photo-bottom">
-            </div>
-          </div>
-          <!-- Text Section -->
-          <div class="col-md-6 text-center text-md-left order-2 order-md-1">
-            <h2 v-scroll-animation class="font-weight-bold">
-              QUI SOMMES NOUS ?
-            </h2>
-            <p v-scroll-animation class="lead" style="font-weight: bold;">
-              Nous sommes l'Association des Femmes Chercheures de Côte d'Ivoire (AFEMC-CI), une organisation dédiée à la promotion des droits et de l'épanouissement professionnel des femmes dans l'enseignement supérieur et la recherche. Fondée le 14 janvier 1995, l'AFEMC-CI regroupe des enseignantes-chercheures et des chercheures de toutes les universités et centres de recherche en Côte d'Ivoire.
-            </p>
-            <NuxtLink v-scroll-animation to="/about" class="btn btn-primary btn-lg mt-3">
-              En savoir plus
-            </NuxtLink>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div>
+      <AboutSection />
+    </div>
 
     <!-- Objectives Section -->
     <NosObjectifs />
 
     <!-- News Section -->
-    <!-- News Section -->
-    <section id="news" class="py-5" style="text-align: center;">
-      <div class="container">
-        <h2 class="font-weight-bold text-center">
-          A la une
-        </h2>
-        <div class="row">
-          <!-- Featured News -->
-          <div class="col-md-12 mb-4">
-            <div class="card border-0 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title font-weight-bold">
-                  Investiture de la Présidente
-                </h5>
-                <div class="embed-responsive embed-responsive-16by9 mb-3">
-                  <iframe
-                    class="embed-responsive-item youtube-video"
-                    src="https://www.youtube.com/embed/5DKPkFZF95A"
-                    allowfullscreen
-                    style="width: 100%; height: 450px;"
-                  />
-                </div>
-                <marquee width="300" scrollamount="300" scrolldelay="5000" style="color: red;">
-                  Rejoignez-nous pour célébrer l'investiture de notre nouvelle présidente. Regardez la vidéo pour en savoir plus sur son discours et ses projets pour l'association.
-                </marquee>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <NewsVideo />
 
     <section id="blog" class="py-5">
       <div class="container">
         <BlogPosts />
       </div>
     </section>
-
     <!-- Contact Section -->
     <ContactVue />
     <SliderVue />
@@ -81,11 +28,15 @@
 </template>
 
 <script>
+import AboutSection from '~/components/AboutSection.vue'
 import ContactVue from '~/components/ContactVue.vue'
+import NewsVideo from '~/components/NewsVideo.vue'
 
 export default {
   name: 'IndexPage',
   components: {
+    AboutSection,
+    NewsVideo,
     ContactVue
   },
   data () {
