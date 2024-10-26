@@ -34,11 +34,11 @@ export default {
   data () {
     return {
       executiveMembers: [
-        { name: 'Prof SANOGO TIDOU Abiba  ', position: 'Professeur Titulaire ', photo: '/images/prof Sanogo.png' },
-        { name: 'Prof GUIDI WADJA JOSEPHINE', position: '', photo: '/images/guidi.png' },
-        { name: 'Prof EHUI épouse AVO BILE BERNADETTE ', position: 'Maître de Conférence ', photo: '/images/prof Ehui.png' },
-        { name: 'Prof Mireille Carmen BRETIN Epouse DOSSO', position: 'Professeur Titulaire ', photo: '/images/prof Dosso.png' },
-        { name: 'Prof ANNICK TAHIRI', position: 'Professeur Titulaire ', photo: '/images/prof Annick.png' }
+        { name: 'PROF. KONE MAWA', position: 'Conseillière', photo: '/images/conseilliere2.PNG' },
+        { name: 'Dr (MC). BINATE NAMIZATA ', position: 'Conseillière Chargée des Etudes Prospectives ', photo: '/images/binate.png' },
+        { name: 'PROF. ASSA REBECCA YAO', position: 'Conseillière Chargée de la Gouvernance', photo: '/images/conseilliere3.PNG' },
+        { name: 'Dr N’TAIN JEANNE', position: 'Conseillière Chargée de la Coopération et des Partenariats', photo: '/images/ntain jeanne.jpg' },
+        { name: 'Dr(MC) YAO MARIE JEANE OHOU', position: 'Conseillière Chargée des Projets Scientifiques et Administratifs', photo: '/images/Conseilliere1.PNG' }
       ]
     }
   }

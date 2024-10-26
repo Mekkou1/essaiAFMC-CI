@@ -40,10 +40,10 @@ export default {
         { name: 'Dr (MC) BEDE AFFOUE LUCIE BAGAYOKO', position: 'Secrétaire adjointe à l’organisation', photo: '/images/secretaire a l organisation adjoint.png' },
         { name: 'Dr(MC) TAPE PULCHERIE KOFFI', position: 'Secrétaire administrative', photo: '/images/secretaire administrative.png' },
         { name: 'Dr(MCA) MELANIE TIA', position: 'Secrétaire administrative adjointe', photo: '/images/secretaire administrative adjoint.png' },
-        { name: 'Dr(MC) ADAYE AKOUA ASUINTA ', position: 'Secrétaire scientifique', photo: '/images/identite.jpeg' },
+        { name: 'Dr(MC) ADAYE AKOUA ASUINTA ', position: 'Secrétaire scientifique', photo: '/images/secretaire scientifique.png' },
         { name: 'Dr(MR) MGBESSO NADEGE KOUADIO', position: 'Secrétaire scientifique adjointe', photo: '/images/secretaire scientifique adjoint.png' },
         { name: 'Dr AMALACHI N’CHO YAYO ', position: 'Trésorière générale', photo: '/images/tresoriere generale.png' },
-        { name: 'Dr OUATTARA ANNETTE ', position: 'Trésorière générale adjointe', photo: '/images/identite.jpeg' }
+        { name: 'Dr OUATTARA ANNETTE ', position: 'Trésorière générale adjointe', photo: '/images/ANNETTE.jpg' }
       ]
     }
   }

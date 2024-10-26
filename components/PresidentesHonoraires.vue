@@ -34,8 +34,8 @@ export default {
   data () {
     return {
       executiveMembers: [
-        { name: 'PROFESSEURE TIDOU ABIBA SANOGO EPSE KONE. ', position: 'Présidente de 1996 à 2015', photo: '/images/identite.jpeg' },
-        { name: 'PROFESSEURE RITA KAKOU EPSE YAO', position: 'Présidente de 2016 à 2022', photo: '/images/identite.jpeg' }
+        { name: 'PROFESSEURE TIDOU ABIBA SANOGO EPSE KONE', position: 'Présidente de 1996 à 2015', photo: '/images/tidou.png' },
+        { name: 'PROFESSEURE RITA KAKOU EPSE YAO', position: 'Présidente de 2016 à 2022', photo: '/images/rita yao.png' }
       ]
     }
   }
