@@ -1,7 +1,7 @@
 // data/newsData.js
 
 export const newsData = {
-  featuredTitle: 'Journée mondiale du rein',
+  featuredTitle: 'JSIFEC 2024',
   videoUrl: 'https://www.youtube.com/embed/4XKJx4-TkD0',
-  marqueeText: "Célébration de la journée Mondiale du rein avec le CNPTIR en partenariat avec l'INSP."
+  marqueeText: 'LES TROISIÈMES JOURNÉES SCIENTIFIQUES INTERNATIONALES DE LA FEMME CHERCHEURE JSIFEC 2024.'
 }
