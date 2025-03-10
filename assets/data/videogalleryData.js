@@ -28,6 +28,12 @@ export const videos = [
     youtubeId: 'FljIew8aKok',
     title: 'Conférence-débat AFEMC-CI du 24 mars 2023',
     description: 'Conférence-débat AFEMC-CI du 24 mars 2023'
+  },
+  {
+    id: 5,
+    youtubeId: '4lfP9uT3I9w',
+    title: 'JSIFEK2024',
+    description: 'Les troisièmes jounées scientifiques internationales de la Femme chercheure JSIFEK 2024'
   }
   // Ajoutez d'autres vidéos ici
 ]
